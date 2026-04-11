@@ -1,0 +1,197 @@
+{
+  "_comment": "WAM NET CSVサービス種別 → 正規化マッピング（全27種別）",
+  "_source": "csvdownload0{NN}.csv のサービス種別列（列11）の生値",
+  "_analyzed_at": "2026-04-12",
+
+  "mappings": [
+    {
+      "nn": 65, "csv_raw": "放課後等デイサービス",
+      "service_type": "放課後等デイサービス",
+      "service_group": "kodomo", "group_name": "子ども向け支援",
+      "slug": "houkago-day", "display_name": "放課後等デイサービス",
+      "records": 24156, "mvp": true
+    },
+    {
+      "nn": 63, "csv_raw": "児童発達支援",
+      "service_type": "児童発達支援",
+      "service_group": "kodomo", "group_name": "子ども向け支援",
+      "slug": "jidou-hattatsu", "display_name": "児童発達支援",
+      "records": 16247, "mvp": true
+    },
+    {
+      "nn": 64, "csv_raw": "医療型児童発達支援",
+      "service_type": "医療型児童発達支援",
+      "service_group": "kodomo", "group_name": "子ども向け支援",
+      "slug": "iryo-jidou-hattatsu", "display_name": "医療型児童発達支援",
+      "records": 39, "mvp": false
+    },
+    {
+      "nn": 66, "csv_raw": "居宅訪問型児童発達支援",
+      "service_type": "居宅訪問型児童発達支援",
+      "service_group": "kodomo", "group_name": "子ども向け支援",
+      "slug": "kyotaku-jidou", "display_name": "居宅訪問型児童発達支援",
+      "records": 346, "mvp": false
+    },
+    {
+      "nn": 67, "csv_raw": "保育所等訪問支援",
+      "service_type": "保育所等訪問支援",
+      "service_group": "kodomo", "group_name": "子ども向け支援",
+      "slug": "hoikusho-houmon", "display_name": "保育所等訪問支援",
+      "records": 3711, "mvp": false
+    },
+    {
+      "nn": 68, "csv_raw": "福祉型障害児入所施設",
+      "service_type": "福祉型障害児入所施設",
+      "service_group": "kodomo", "group_name": "子ども向け支援",
+      "slug": "fukushi-nyusho", "display_name": "福祉型障害児入所施設",
+      "records": 243, "mvp": false
+    },
+    {
+      "nn": 69, "csv_raw": "医療型障害児入所施設",
+      "service_type": "医療型障害児入所施設",
+      "service_group": "kodomo", "group_name": "子ども向け支援",
+      "slug": "iryo-nyusho", "display_name": "医療型障害児入所施設",
+      "records": 227, "mvp": false
+    },
+    {
+      "nn": 70, "csv_raw": "障害児相談支援",
+      "service_type": "障害児相談支援",
+      "service_group": "kodomo", "group_name": "子ども向け支援",
+      "slug": "shogaiji-soudan", "display_name": "障害児相談支援",
+      "records": 9509, "mvp": false
+    },
+    {
+      "nn": 60, "csv_raw": "就労移行支援",
+      "service_type": "就労移行支援",
+      "service_group": "shuro", "group_name": "就労支援",
+      "slug": "shuro-ikou", "display_name": "就労移行支援",
+      "records": 3389, "mvp": false
+    },
+    {
+      "nn": 45, "csv_raw": "就労継続支援Ａ型",
+      "service_type": "就労継続支援A型",
+      "service_group": "shuro", "group_name": "就労支援",
+      "slug": "shuro-a", "display_name": "就労継続支援A型",
+      "records": 4633, "mvp": false
+    },
+    {
+      "nn": 46, "csv_raw": "就労継続支援Ｂ型",
+      "service_type": "就労継続支援B型",
+      "service_group": "shuro", "group_name": "就労支援",
+      "slug": "shuro-b", "display_name": "就労継続支援B型",
+      "records": 19909, "mvp": false
+    },
+    {
+      "nn": 62, "csv_raw": "就労定着支援",
+      "service_type": "就労定着支援",
+      "service_group": "shuro", "group_name": "就労支援",
+      "slug": "shuro-teichaku", "display_name": "就労定着支援",
+      "records": 1935, "mvp": false
+    },
+    {
+      "nn": 33, "csv_raw": "共同生活援助",
+      "service_type": "共同生活援助",
+      "service_group": "sumai", "group_name": "住まい",
+      "slug": "group-home", "display_name": "グループホーム（共同生活援助）",
+      "records": 15537, "mvp": false
+    },
+    {
+      "nn": 61, "csv_raw": "自立生活援助",
+      "service_type": "自立生活援助",
+      "service_group": "sumai", "group_name": "住まい",
+      "slug": "jiritsu-seikatsu", "display_name": "自立生活援助",
+      "records": 502, "mvp": false
+    },
+    {
+      "nn": 22, "csv_raw": "生活介護",
+      "service_type": "生活介護",
+      "service_group": "nicchu", "group_name": "日中活動",
+      "slug": "seikatsu-kaigo", "display_name": "生活介護",
+      "records": 13049, "mvp": false
+    },
+    {
+      "nn": 41, "csv_raw": "自立訓練（機能訓練）",
+      "service_type": "自立訓練（機能訓練）",
+      "service_group": "nicchu", "group_name": "日中活動",
+      "slug": "kinou-kunren", "display_name": "自立訓練（機能訓練）",
+      "records": 285, "mvp": false
+    },
+    {
+      "nn": 42, "csv_raw": "自立訓練（生活訓練）",
+      "service_type": "自立訓練（生活訓練）",
+      "service_group": "nicchu", "group_name": "日中活動",
+      "slug": "seikatsu-kunren", "display_name": "自立訓練（生活訓練）",
+      "records": 1626, "mvp": false
+    },
+    {
+      "nn": 21, "csv_raw": "療養介護",
+      "service_type": "療養介護",
+      "service_group": "nicchu", "group_name": "日中活動",
+      "slug": "ryouyou-kaigo", "display_name": "療養介護",
+      "records": 267, "mvp": false
+    },
+    {
+      "nn": 32, "csv_raw": "施設入所支援",
+      "service_type": "施設入所支援",
+      "service_group": "nicchu", "group_name": "日中活動",
+      "slug": "shisetsu-nyusho", "display_name": "施設入所支援",
+      "records": 2554, "mvp": false
+    },
+    {
+      "nn": 11, "csv_raw": "居宅介護",
+      "service_type": "居宅介護",
+      "service_group": "zaitaku", "group_name": "在宅支援",
+      "slug": "kyotaku-kaigo", "display_name": "居宅介護（ホームヘルプ）",
+      "records": 24812, "mvp": false
+    },
+    {
+      "nn": 12, "csv_raw": "重度訪問介護",
+      "service_type": "重度訪問介護",
+      "service_group": "zaitaku", "group_name": "在宅支援",
+      "slug": "judo-houmon", "display_name": "重度訪問介護",
+      "records": 20803, "mvp": false
+    },
+    {
+      "nn": 15, "csv_raw": "同行援護",
+      "service_type": "同行援護",
+      "service_group": "zaitaku", "group_name": "在宅支援",
+      "slug": "doukou-engo", "display_name": "同行援護",
+      "records": 7640, "mvp": false
+    },
+    {
+      "nn": 13, "csv_raw": "行動援護",
+      "service_type": "行動援護",
+      "service_group": "zaitaku", "group_name": "在宅支援",
+      "slug": "koudou-engo", "display_name": "行動援護",
+      "records": 3019, "mvp": false
+    },
+    {
+      "nn": 14, "csv_raw": "重度障害者等包括支援",
+      "service_type": "重度障害者等包括支援",
+      "service_group": "zaitaku", "group_name": "在宅支援",
+      "slug": "judo-houkatsu", "display_name": "重度障害者等包括支援",
+      "records": 19, "mvp": false
+    },
+    {
+      "nn": 52, "csv_raw": "計画相談支援",
+      "service_type": "計画相談支援",
+      "service_group": "soudan", "group_name": "相談支援",
+      "slug": "keikaku-soudan", "display_name": "計画相談支援",
+      "records": 12796, "mvp": false
+    },
+    {
+      "nn": 53, "csv_raw": "地域相談支援（地域移行支援）",
+      "service_type": "地域相談支援（地域移行支援）",
+      "service_group": "soudan", "group_name": "相談支援",
+      "slug": "chiiki-ikou", "display_name": "地域移行支援",
+      "records": 3707, "mvp": false
+    },
+    {
+      "nn": 54, "csv_raw": "地域相談支援（地域定着支援）",
+      "service_type": "地域相談支援（地域定着支援）",
+      "service_group": "soudan", "group_name": "相談支援",
+      "slug": "chiiki-teichaku", "display_name": "地域定着支援",
+      "records": 3569, "mvp": false
+    }
+  ]
+}

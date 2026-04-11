@@ -1,0 +1,89 @@
+{
+  "_comment": "WAM NET CSV → 正規化後のサンプルレコード（放課後等デイサービス）",
+  "_source_csv": "csvdownload065.csv",
+  "_source_row": "1行目",
+
+  "office_id": "wam_shogai:0150102242:houkago-day",
+  "portal_type": "shogaifukushi",
+  "service_code": "65",
+  "service_type": "放課後等デイサービス",
+  "service_group": "kodomo",
+  "service_group_name": "子ども向け支援",
+
+  "name": "ＮＩＣ　Ｂ児童デイサービス",
+  "name_kana": "にっくびーじどうでいさーびす",
+
+  "prefecture": "北海道",
+  "pref_code": "01",
+  "city": "札幌市白石区",
+  "city_code": "01104",
+  "address": "北海道札幌市白石区北１７条西９丁目２－１２",
+  "address_detail": "北１７条西９丁目２－１２",
+  "postal_code": null,
+
+  "tel": "011-633-1589",
+  "fax": "011-633-1588",
+
+  "corporation_name": "スプレームエッグズ合同会社",
+  "corporation_name_kana": "すぷれーむえっぐずごうどうがいしゃ",
+  "corporation_number": null,
+
+  "office_code": "0150102242",
+
+  "latitude": 43.0365006,
+  "longitude": 141.3467282,
+
+  "website_url": "https://mka-s.com/92/",
+
+  "hours_weekday": "08:30-17:30",
+  "hours_saturday": null,
+  "hours_sunday": null,
+  "hours_holiday": null,
+  "closed_days": "土日祝",
+  "hours_note": null,
+
+  "capacity": 10,
+
+  "multi_function": true,
+  "coexisting_services": ["児童発達支援"],
+
+  "source_primary": "wam_shogai_open_data",
+  "source_url": "https://www.wam.go.jp/content/wamnet/pcpub/top/sfkopendata/",
+  "source_period": "202509",
+  "retrieved_at": "2026-04-12T02:50:00+09:00",
+
+  "is_active": true,
+
+  "_build_site_format": {
+    "_comment": "build_site.py に投入する形式（既存互換）",
+    "kikan_cd": "0150102242-houkago-day",
+    "name": "ＮＩＣ　Ｂ児童デイサービス",
+    "address": "北海道札幌市白石区北１７条西９丁目２－１２",
+    "postal": "",
+    "tel": "011-633-1589",
+    "fax": "011-633-1588",
+    "url": "https://mka-s.com/92/",
+    "pref": "北海道",
+    "pref_code": "01",
+    "lat": 43.0365006,
+    "lng": 141.3467282,
+    "kikan_kbn": "2",
+    "business_status": "OPERATIONAL",
+    "specialties": ["放課後等デイサービス"],
+    "emergency": {},
+    "rating": null,
+    "review_count": null,
+    "photo_url": "",
+    "image_url": "",
+    "place_id": "",
+    "corporation_name": "スプレームエッグズ合同会社",
+    "source": "wam_shogai_opendata",
+    "service_type": "放課後等デイサービス",
+    "service_group": "kodomo",
+    "capacity": 10,
+    "hours_weekday": "08:30-17:30",
+    "closed_days": "土日祝",
+    "multi_function": true,
+    "coexisting_services": ["児童発達支援"]
+  }
+}
