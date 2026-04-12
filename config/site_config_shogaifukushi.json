@@ -15,11 +15,11 @@
 
   "members_api_url": "",
 
-  "data_file": "data/shogaifukushi_build.json",
-  "site_dir": "site_shogaifukushi",
+  "data_file": "C:/Users/volzs/projects/shogaifukushi-navi/data/shogaifukushi_build.json",
+  "site_dir": "C:/Users/volzs/projects/shogaifukushi-navi/site_shogaifukushi",
   "blog_src": "",
-  "region_texts_file": "",
-  "page_texts_file": "",
+  "region_texts_file": "region_texts_shogaifukushi.json",
+  "page_texts_file": "page_texts_shogaifukushi.json",
 
   "ga4_measurement_id": "",
 
@@ -28,6 +28,7 @@
 
   "entity_name": "事業所",
   "entity_type": "障害福祉サービス事業所",
+  "entity_name_short": "事業所",
   "care_type": "障害福祉サービス",
   "care_type_formal": "障害福祉サービス",
   "entity_detail_prefix": "office",
@@ -58,36 +59,6 @@
           {"type": "after_school_day_service", "display": "放課後等デイサービス", "slug": "after-school-day-service"},
           {"type": "child_development_support", "display": "児童発達支援", "slug": "child-development-support"}
         ]
-      },
-      "employment": {
-        "name": "就労支援",
-        "slug": "employment",
-        "description": "働きたい方の就職支援・作業所・職場定着",
-        "services": []
-      },
-      "housing": {
-        "name": "住まい",
-        "slug": "housing",
-        "description": "グループホーム・一人暮らし支援",
-        "services": []
-      },
-      "day_support": {
-        "name": "日中活動",
-        "slug": "day-support",
-        "description": "日中の活動・リハビリ・ショートステイ",
-        "services": []
-      },
-      "home_support": {
-        "name": "在宅支援",
-        "slug": "home-support",
-        "description": "自宅での介護・外出支援・移動支援",
-        "services": []
-      },
-      "consultation": {
-        "name": "相談支援",
-        "slug": "consultation",
-        "description": "サービス利用の計画作成・地域生活の相談",
-        "services": []
       }
     }
   }

@@ -2,6 +2,9 @@
 data_sources/wam_net/*.csv
 data/*.json
 
+# ビルド出力（大きいため除外）
+site_shogaifukushi/
+
 # レポートJSONは保持（分析結果として重要）
 # data_sources/reports/ は含める
 

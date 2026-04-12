@@ -489,7 +489,9 @@ def to_build_site_format(rec):
         "lng": ofc["lng"],
         "kikan_kbn": "2",  # build_site.pyはkikan_kbn='2'のみ処理する
         "business_status": "OPERATIONAL",
-        "specialties": [svc["display_name"]],
+        # specialties は空配列: 既存build_site.pyの「主な診療科目は...」文言を抑止するため
+        # 代わりにサービス種別は service_display_name フィールドで保持
+        "specialties": [],
         "emergency": {},
         "rating": None,
         "review_count": None,
