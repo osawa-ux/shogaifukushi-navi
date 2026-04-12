@@ -1,0 +1,94 @@
+{
+  "_comment": "障害福祉サービスナビ Phase 1 設定（放課後等デイサービス＋児童発達支援）",
+
+  "site_id": "shogaifukushi",
+  "site_name": "障害福祉サービスナビ",
+  "site_subtitle": "全国の障害福祉サービス事業所検索",
+  "site_title": "障害福祉サービスナビ｜放課後等デイサービス・児童発達支援を探す",
+  "site_description": "お子さまの放課後等デイサービス・児童発達支援事業所を全国から検索できます。定員・営業時間・アクセスなどの基本情報を掲載。",
+  "site_base_url": "https://shogaifukushi-navi.com",
+  "cname_domain": "shogaifukushi-navi.com",
+
+  "operator_name": "MDX株式会社",
+  "copyright_text": "&copy; 2026 障害福祉サービスナビ",
+  "footer_description": "全国の障害福祉サービス事業所を検索できるポータルサイトです。",
+
+  "members_api_url": "",
+
+  "data_file": "data/shogaifukushi_build.json",
+  "site_dir": "site_shogaifukushi",
+  "blog_src": "",
+  "region_texts_file": "",
+  "page_texts_file": "",
+
+  "ga4_measurement_id": "",
+
+  "og_site_name": "障害福祉サービスナビ",
+  "og_default_image_path": "/static/ogp.png",
+
+  "entity_name": "事業所",
+  "entity_type": "障害福祉サービス事業所",
+  "care_type": "障害福祉サービス",
+  "care_type_formal": "障害福祉サービス",
+  "entity_detail_prefix": "office",
+  "listing_unit": "件",
+  "search_description_template": "全国{count}件の{entity_type}を掲載しています。",
+  "pref_title_template": "{pref}の放課後等デイサービス・児童発達支援（{n}件）【2026年】| {site_name}",
+  "city_title_template": "{city}（{pref}）の放課後等デイサービス・児童発達支援一覧（{n}件） | {site_name}",
+
+  "formspree_id_contact": "",
+  "formspree_id_register": "",
+  "formspree_id_premium": "",
+
+  "premium_price_display": "未定",
+  "premium_price_label": "準備中",
+  "premium_payment_method": "",
+
+  "badge_24h_label": "",
+
+  "_shogaifukushi_config": {
+    "phase": 1,
+    "target_services": ["after_school_day_service", "child_development_support"],
+    "service_groups": {
+      "children": {
+        "name": "子ども向け支援",
+        "slug": "children",
+        "description": "お子さまの療育・発達支援・放課後の居場所",
+        "services": [
+          {"type": "after_school_day_service", "display": "放課後等デイサービス", "slug": "after-school-day-service"},
+          {"type": "child_development_support", "display": "児童発達支援", "slug": "child-development-support"}
+        ]
+      },
+      "employment": {
+        "name": "就労支援",
+        "slug": "employment",
+        "description": "働きたい方の就職支援・作業所・職場定着",
+        "services": []
+      },
+      "housing": {
+        "name": "住まい",
+        "slug": "housing",
+        "description": "グループホーム・一人暮らし支援",
+        "services": []
+      },
+      "day_support": {
+        "name": "日中活動",
+        "slug": "day-support",
+        "description": "日中の活動・リハビリ・ショートステイ",
+        "services": []
+      },
+      "home_support": {
+        "name": "在宅支援",
+        "slug": "home-support",
+        "description": "自宅での介護・外出支援・移動支援",
+        "services": []
+      },
+      "consultation": {
+        "name": "相談支援",
+        "slug": "consultation",
+        "description": "サービス利用の計画作成・地域生活の相談",
+        "services": []
+      }
+    }
+  }
+}
