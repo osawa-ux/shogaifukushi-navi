@@ -45,7 +45,15 @@
   "premium_price_label": "準備中",
   "premium_payment_method": "",
 
-  "badge_24h_label": "",
+  "badge_24h_label": "土曜開所バッジ",
+
+  "nav_for_users_label": "ご家族の方へ",
+  "nav_for_users_href": "/",
+  "nav_for_providers_label": "事業者の方へ",
+  "nav_for_providers_href": "/for-clinics.html",
+  "schema_org_type": "LocalBusiness",
+  "is_medical_site": false,
+  "show_medical_form_fields": false,
 
   "_shogaifukushi_config": {
     "phase": 1,
