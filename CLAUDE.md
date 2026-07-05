@@ -44,11 +44,10 @@ python ~/.claude/skills/_shared/resolve_vault.py --join "10_Daily/..."      # �
 
 ### 読む候補ノート（Vault 内の相対パス）
 
-現行 vault 体系（`00_Inbox` / `10_Daily` / `20_Projects` / `30_Areas` / `40_Resources` / `40_Strategy` / `50_Research` / `60_Decisions` / `60_Meetings` / `70_SOP` / `80_Templates` / `90_Scripts` / `99_Archive`）から、この repo で参照頻度が高いもの:
+現行 vault 体系（`00_Inbox` / `10_Daily` / `20_Projects` / `30_Areas` / `40_Resources` / `50_Research` / `60_Decisions` / `60_Meetings` / `70_SOP` / `80_Templates` / `85_Prompts` / `90_Templates` / `99_Archive`）から、この repo で参照頻度が高いもの:
 
 - `20_Projects/welfare/index.md` — この repo の現在地・重要論点
 - `30_Areas/` — 領域・継続テーマ（開発運用原則 等）
-- `40_Strategy/` 配下の関連ノート（共通基盤 / SEO / ドメイン / 収益化）
 - `40_Resources/` — 共通リソース・参照資料
 - `60_Decisions/` 配下の意思決定ログ
 - `70_SOP/` 配下の標準業務手順書（算定 / チャット返信 / SEO 等のドメイン判断時）
@@ -58,10 +57,11 @@ python ~/.claude/skills/_shared/resolve_vault.py --join "10_Daily/..."      # �
 
 Vault の絶対パスはこのテンプレには埋め込まない（PC ごとに異なるため）。運用方針の正本は Vault 内の `_Vault運用方針.md`。
 
-PC 別の Vault path は以下のいずれかで解決する:
-- 環境変数 `$env:OBSIDIAN_VAULT`（設定済みの場合）
-- PC ローカルの `~/CLAUDE.md`（git管理外、各PCで実パスを記載）
-- Obsidian アプリ設定（`File → Manage vaults`）
+PC 別の Vault path は resolver で解決する（絶対パス直書き禁止）:
+```bash
+python ~/.claude/skills/_shared/resolve_vault.py
+```
+解決順: `$OBSIDIAN_VAULT` → Obsidian アプリ設定（`%APPDATA%\obsidian\obsidian.json` の open=true な vault）→ `~/Obsidian`
 
 ---
 
@@ -187,4 +187,4 @@ Obsidian 記録判断: Daily短文ログ / Project更新 / SOP昇格 / 記録な
 repo 作業時に意識すること:
 - **MEMORY = 軽量 index + 短い原則**。詳細手順・テンプレ・事例は Obsidian `70_SOP/` へ置く
 - 新規 `feedback_*.md` は 50行以内。超えそうなら SOP 分離
-- チャット系は `feedback_chat_reply_rules.md` / `feedback_chat_check_rules.md` に追記。新規 `feedback_chat_*.md` は作らない
+- skill 実行時に読まれるべき挙動ルールは auto-memory でなく vault の `30_Areas/<skill>-patterns/`（委任型 skill レジストリ・正本 `70_SOP/obsidian-save-policy.md`）に書く
