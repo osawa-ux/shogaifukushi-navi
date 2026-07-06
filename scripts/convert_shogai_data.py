@@ -146,6 +146,27 @@ SERVICE_DISPLAY_NAME = {
 # Phase 1 対象
 PHASE1_SERVICES = {"after_school_day_service", "child_development_support"}
 
+# === 名称欠落レコードの除外テーブル（2026-07-06 調査確定） ===
+# WAM NET オープンデータ上の「事業所の名称」列が全角スペース1文字のみで
+# 実質空欄となっているレコード。一次ソース照合で正式名称を確認できなかったため、
+# 名称を推測で埋めず、該当 (事業所番号, サービス種別) の組をビルド対象から除外する。
+#
+# 調査記録（事業所番号 1050100138 / 放課後等デイサービス / 前橋市 / 社会福祉法人あかぎの響）:
+#   - CSV: 事業所の名称="　"（全角スペース1文字）、事業所の名称_かな="だいつゆくさくらぶ"、
+#     事業所電話番号="0272880561"、定員="10"
+#   - 法人公式サイト https://akaginohibiki.jp/ の全事業所一覧・各事業所ページを確認したが、
+#     複数キーが同時に一致する候補は見つからなかった:
+#     - 「つくしキッズ」: 電話 027-288-0561・定員10名は一致するが、サービス種別は
+#       児童発達支援事業のみでページ内に「放課後等デイサービス」の記載なし（種別不一致）
+#     - 「つゆ草クラブ」: サービス種別は放課後等デイサービスで一致し、かな読み
+#       「つゆくさくらぶ」も部分一致（先頭の「だい」を除く）するが、電話 027-288-7004・
+#       定員20名で CSV の電話・定員と一致しない
+#   - いずれの候補も要件（複数キー一致・かな読み単独一致は不可）を満たさないため確認不能と判断。
+#     中間案（かな読みをそのまま名称に転用する等）は採らない。
+EXCLUDED_OFFICE_SERVICE_KEYS = frozenset([
+    ("1050100138", "after_school_day_service"),
+])
+
 # 正規化キー → URL slug
 SERVICE_SLUG_MAP = {
     "after_school_day_service":     "after-school-day-service",
@@ -376,6 +397,10 @@ def convert_row(row, csv_filename):
     office_number = clean(row[COL_OFFICE_NUMBER]) or ""
     if not office_number:
         return None  # 事業所番号なしはスキップ
+
+    # 名称欠落・一次ソースで確認不能なレコードの除外（EXCLUDED_OFFICE_SERVICE_KEYS 参照）
+    if (office_number, service_type) in EXCLUDED_OFFICE_SERVICE_KEYS:
+        return None
 
     # ID生成
     record_id = f"wam:{service_type}:{office_number}"
