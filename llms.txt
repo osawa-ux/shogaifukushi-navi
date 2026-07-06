@@ -1,0 +1,20 @@
+# 障害福祉サービスナビ
+
+> 全国 47 都道府県の障害福祉サービス事業所を収録する検索ポータルです。保護者・ご本人・支援者が、地域名や対応サービスから事業所を探せます。掲載データは WAM NET（独立行政法人福祉医療機構）の障害福祉サービス等情報公表オープンデータをもとに構築しています。
+
+## 主要ページ
+
+- [トップページ](https://welfare.zaitaku-navi.com/): 都道府県から障害福祉サービス事業所を検索
+- [都道府県別一覧](https://welfare.zaitaku-navi.com/sitemap-html.html): 47 都道府県・市区町村別の事業所一覧
+
+## 事業者の方へ
+
+- [掲載案内](https://welfare.zaitaku-navi.com/for-clinics.html): 事業者向けの掲載概要
+- [掲載プラン](https://welfare.zaitaku-navi.com/premium.html): 各掲載プランのご案内
+- [掲載情報の確認・修正](https://welfare.zaitaku-navi.com/register-free.html)
+
+## 運営情報
+
+- [運営者情報](https://welfare.zaitaku-navi.com/about.html)
+- [編集方針](https://welfare.zaitaku-navi.com/editorial-policy.html): 掲載順位は中立（広告枠は明示表示）
+- [お問い合わせ](https://welfare.zaitaku-navi.com/contact.html)
