@@ -1,11 +1,11 @@
 {
-  "last_run": "2026-07-06T13:39:12.656453",
+  "last_run": "2026-07-12T10:31:50.811554",
   "metrics": {
     "data_record_count": 40402,
     "expected_detail_count": 40099,
     "detail_html_count": 40099,
     "search_json_total": 40099,
-    "sitemap_loc_count": 41567,
-    "total_html_count": 41671
+    "sitemap_loc_count": 41564,
+    "total_html_count": 41666
   }
 }
