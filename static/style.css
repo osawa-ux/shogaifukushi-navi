@@ -26,6 +26,31 @@ table td a { text-decoration: underline; }
 h1 { font-size: 1.5em; color: #1a6e3c; margin-bottom: 16px; line-height: 1.3; }
 h2 { font-size: 1.15em; color: #333; margin: 24px 0 12px; border-left: 4px solid #1a6e3c; padding-left: 10px; }
 
+/* === 本文ブロック間の余白（2026-08-05 修正） ===
+   欠陥: 冒頭の `* { margin: 0 }` リセットにより本文 p の margin-bottom が 0px になり、
+   段落間の余白(0px)が段落内の行の余白(line-height 28.9px - font-size 17px = 11.9px)よりも
+   狭かった。そのため段落が終わっても切れ目に見えない（「そのまま次が始まって見える」）。
+   2段構成で是正する:
+   (1) 隣接する段落同士には最低 8px の切れ目を必ず入れる。margin-top 側に置くことで
+       ブロック末尾（カード・注記ボックスの最後の段落の下）には余白が増えない＝過剰に開かない。
+   (2) 本文フロー直下の段落は 24px。段落内の行の余白 11.9px の約2倍で、段落の切れ目として
+       明確に読める。値は design-base の余白スケール(4/8/12/16/24/32)に合わせている。
+       .container 直下 / class の付かない素の section 直下 / guide 記事本文 のみが対象で、
+       class 付き section（.top-* / .b2b-* 等のカード）内の p は従来どおり（過剰に開かない）。
+   既存の明示指定（.cta-section p / .blog-article p / インライン style 等）は
+   詳細度で優先されるため本ルールの影響を受けない。 */
+p + p { margin-top: 8px; }
+.container > p,
+.container > section:not([class]) > p,
+.guide-article > p { margin-bottom: 24px; }
+
+/* 見出しは「上に大きく・下に小さく」。直前に兄弟要素がある h2（＝本文の途中に現れる
+   セクション見出し）は、本文段落の下余白 24px より明確に大きい 40px で切れ目を作る。
+   ブロック先頭の h2（カード / section の最初の子）は従来どおり 24px のままにして、
+   カード側の padding と二重に開かないようにする。
+   .blog-article h2 (margin-top 2.5em) は詳細度が高いため不変。 */
+* + h2 { margin-top: 40px; }
+
 /* CTA（今すぐ相談）セクション */
 .cta-section { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); border-radius: 10px; padding: 20px; margin-bottom: 24px; text-align: center; }
 .cta-section p { margin-bottom: 10px; font-size: 0.95em; color: #333; }
@@ -277,6 +302,17 @@ footer a { color: #aaa; }
 .top-journey-body { display: flex; flex-direction: column; gap: 2px; }
 .top-journey-desc { font-size: 0.82em; color: #777; margin-top: 2px; }
 .top-journey-arrow { font-size: 1.1em; color: #1a6e3c; flex-shrink: 0; margin-left: 8px; }
+/* 姉妹サイト（トップページ本文内クロスリンク）
+   2026-08-05 視認性修正: 従来は <li> の margin が 0（* リセット）で3項目が密着し、
+   さらに「リンク名 — 説明文」が1行に同居していたためリンク(#0066cc)と説明文が混ざって
+   走査しづらかった。リンク名を独立行（やや強め）、説明文をその下の控えめな行に分け、
+   項目間に余白を置く。カード背景・角丸・影は既存のまま＝装飾は増やさない。
+   リンクは min-height 44px でタップ領域（design-base 第1層）を満たす。 */
+.top-related-navi ul { list-style: none; margin-top: 12px; padding: 0; }
+.related-navi-item { margin-bottom: 12px; }
+.related-navi-item:last-child { margin-bottom: 0; }
+.related-navi-link { display: flex; align-items: center; min-height: 44px; font-weight: 600; line-height: 1.5; }
+.related-navi-desc { display: block; font-size: 0.85em; color: #555; line-height: 1.6; }
 .top-faq-section { background: white; border-radius: 16px; padding: 20px; margin-top: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .top-disclaimer { font-size: 0.78em; color: #999; margin-top: 20px; line-height: 1.6; padding: 10px 0; }
 .guide-faq dt { font-weight: bold; margin-top: 16px; margin-bottom: 4px; color: #1a6e3c; }
