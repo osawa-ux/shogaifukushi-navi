@@ -16,5 +16,5 @@
 ## 運営情報
 
 - [運営者情報](https://welfare.zaitaku-navi.com/about.html)
-- [編集方針](https://welfare.zaitaku-navi.com/editorial-policy.html): 掲載順位は中立（広告枠は明示表示）
+- [編集方針](https://welfare.zaitaku-navi.com/editorial-policy.html): 掲載順位は有料掲載プランの契約有無を優先要素として決定（広告枠は明示表示）
 - [お問い合わせ](https://welfare.zaitaku-navi.com/contact.html)
